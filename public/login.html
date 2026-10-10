@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f6f1">
+  <meta name="description" content="Sign in or create your Stylora account.">
+  <title>Sign in | Stylora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+  <script src="account-store.js" defer></script>
+  <script src="login.js" defer></script>
+</head>
+<body class="login-page">
+  <header class="login-header">
+    <a class="logo" href="index.html">stylora<span>.</span></a>
+    <a class="login-back-link" href="index.html">← Back to the store</a>
+  </header>
+
+  <main class="login-layout">
+    <section class="login-form-panel" aria-labelledby="loginTitle">
+      <div class="login-form-inner">
+        <span class="eyebrow">YOUR STYLORA</span>
+        <h1 id="loginTitle">Welcome back<span class="heading-dot">.</span></h1>
+        <p class="login-intro">Sign in to keep your bag close and find your next favourite.</p>
+
+        <form id="loginForm" class="login-form" novalidate>
+          <label id="loginNameField" hidden>
+            Full name
+            <input type="text" name="name" maxlength="100" autocomplete="name" placeholder="Your full name">
+          </label>
+          <label id="loginUsernameField" hidden>
+            Username
+            <input type="text" name="username" maxlength="30" minlength="3" pattern="[A-Za-z0-9._\-]{3,30}" autocomplete="username" placeholder="Choose a username">
+          </label>
+          <label id="loginIdentifierField">
+            Username or email
+            <input type="text" name="identifier" required maxlength="150" autocomplete="username" placeholder="Your username or email">
+          </label>
+          <label id="loginEmailField" hidden>
+            Email address
+            <input type="email" name="email" maxlength="150" autocomplete="email" placeholder="you@example.com">
+          </label>
+          <label>
+            Password
+            <input id="loginPassword" type="password" name="password" required maxlength="72" autocomplete="current-password" placeholder="Your password">
+          </label>
+          <p id="loginFeedback" class="login-feedback" role="status" aria-live="polite"></p>
+          <button id="loginSubmit" class="primary-button full-width" type="submit">Sign in <span>↗</span></button>
+        </form>
+
+        <button id="loginModeToggle" class="login-mode-toggle" type="button">Create an account</button>
+        <p id="loginConnectionNote" class="login-connection-note" role="status"></p>
+        <p class="login-note">Your account is stored only in this browser. It won’t sync to other devices and isn’t suitable for sensitive passwords.</p>
+      </div>
+    </section>
+
+    <aside class="login-visual" aria-label="Stylora everyday fashion">
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=85" alt="Friends exploring a modern fashion collection">
+      <div class="login-visual-shade"></div>
+      <div class="login-visual-copy">
+        <span class="eyebrow">THE EVERYDAY EDIT</span>
+        <p>Good style.<br><em>Your own way.</em></p>
+        <a href="index.html#collection">Explore the collection <span>↗</span></a>
+      </div>
+      <span class="login-visual-index">STYLORA — FIND YOUR STYLE</span>
+    </aside>
+  </main>
+</body>
+</html>
