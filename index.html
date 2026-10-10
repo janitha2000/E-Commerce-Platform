@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f6f1">
+  <meta name="description" content="Discover your style with Stylora — fashion, accessories and everyday essentials.">
+  <title>Stylora | Find Your Style</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="products.js" defer></script>
+  <script src="account-store.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">
+    Discover your everyday style. Welcome to Stylora.
+  </div>
+
+  <header class="site-header">
+    <a class="logo" href="#home">stylora<span>.</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#collection">Collection</a>
+      <a href="#story">Our Story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-button" id="searchToggle" aria-label="Search products">⌕</button>
+      <button class="account-button" id="accountOpen" type="button">Sign in</button>
+      <button class="cart-button" id="cartOpen" aria-label="Open shopping cart">
+        Shopping Cart <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">THE NEW EVERYDAY</span>
+        <h1>Style that feels<br><em>like you.</em></h1>
+        <p>Thoughtfully chosen fashion for every version of you. Discover pieces that make everyday moments feel special.</p>
+        <a href="#collection" class="primary-button">Explore collection <span>↗</span></a>
+        <div class="hero-note">
+          <span class="note-line"></span>
+          <span>Made for your everyday moments</span>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap" data-tilt>
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=85"
+          alt="Contemporary fashion collection"
+          onerror="this.src='https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85'"
+        >
+        <div class="image-label">
+          <span>01 / THE EDIT</span>
+          <span>Effortless essentials</span>
+        </div>
+        <div class="floating-label">
+          <span class="floating-star">✳</span>
+          <span>Find your<br>own kind of style.</span>
+        </div>
+      </div>
+      <div class="hero-decoration">S T Y L O R A</div>
+    </section>
+
+    <section class="benefits">
+      <div><span class="benefit-icon">✳</span><span>Curated with care</span></div>
+      <div><span class="benefit-icon">◇</span><span>Everyday essentials</span></div>
+      <div><span class="benefit-icon">♡</span><span>Local checkout preview</span></div>
+      <div><span class="benefit-icon">↗</span><span>Designed for real life</span></div>
+    </section>
+
+    <section class="featured-collections section-padding" id="edits">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">FIND YOUR FEEL</span>
+          <h2>Curated edits<span class="heading-dot">.</span></h2>
+        </div>
+        <p>Little worlds of style, made for wherever the day takes you.</p>
+      </div>
+      <div class="collection-grid">
+        <button class="collection-card" type="button" data-collection-category="Clothing" data-tilt>
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=850&q=85" alt="Modern clothing from the Soft Form edit" loading="lazy">
+          <span class="collection-card-shade"></span>
+          <span class="collection-card-copy"><small>THE EVERYDAY EDIT</small><strong>Soft Form</strong><span>Clothing <b>↗</b></span></span>
+        </button>
+        <button class="collection-card" type="button" data-collection-category="Bags" data-tilt>
+          <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=850&q=85" alt="A versatile everyday backpack" loading="lazy">
+          <span class="collection-card-shade"></span>
+          <span class="collection-card-copy"><small>MADE TO MOVE</small><strong>Carry On</strong><span>Bags <b>↗</b></span></span>
+        </button>
+        <button class="collection-card" type="button" data-collection-category="Footwear" data-tilt>
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=850&q=85" alt="Bright, comfortable sneakers for the weekend" loading="lazy">
+          <span class="collection-card-shade"></span>
+          <span class="collection-card-copy"><small>OFF-DUTY, ON POINT</small><strong>Weekend Pace</strong><span>Footwear <b>↗</b></span></span>
+        </button>
+        <button class="collection-card" type="button" data-collection-category="Accessories" data-tilt>
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=850&q=85" alt="A considered edit of fashion accessories" loading="lazy">
+          <span class="collection-card-shade"></span>
+          <span class="collection-card-copy"><small>THE FINISHING TOUCH</small><strong>Details Matter</strong><span>Accessories <b>↗</b></span></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="collection section-padding" id="collection">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">A LITTLE SOMETHING FOR YOU</span>
+          <h2>The collection<span class="heading-dot">.</span></h2>
+        </div>
+        <p>Pieces you'll reach for, again and again.</p>
+      </div>
+
+      <div class="collection-tools">
+        <div class="category-pills" id="categoryPills">
+          <button class="category-pill active" type="button" data-category="All" aria-pressed="true">All pieces</button>
+          <button class="category-pill" type="button" data-category="Clothing" aria-pressed="false">Clothing</button>
+          <button class="category-pill" type="button" data-category="Accessories" aria-pressed="false">Accessories</button>
+          <button class="category-pill" type="button" data-category="Footwear" aria-pressed="false">Footwear</button>
+          <button class="category-pill" type="button" data-category="Bags" aria-pressed="false">Bags</button>
+        </div>
+
+        <div class="collection-controls">
+          <input id="searchInput" type="search" placeholder="Search pieces..." aria-label="Search products">
+          <select id="sortFilter" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: low to high</option>
+            <option value="price-high">Price: high to low</option>
+            <option value="name">Name: A to Z</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="productCount" class="collection-count" aria-live="polite"></p>
+      <div id="productMessage" class="status-message" role="status"></div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="collection-bottom">
+        <span>GOOD STYLE. EVERY SINGLE DAY.</span>
+        <a href="#home">Back to top ↑</a>
+      </div>
+    </section>
+
+    <section class="story section-padding" id="story">
+      <div class="story-image">
+        <img
+          src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1100&q=85"
+          alt="Minimal fashion boutique"
+          loading="lazy"
+        >
+        <span class="story-image-caption">THE STYLORA EDIT — EST. 2026</span>
+      </div>
+      <div class="story-content">
+        <span class="eyebrow">MORE THAN WHAT YOU WEAR</span>
+        <h2>Your style.<br> Your story.<br><em>Your Stylora.</em></h2>
+        <p>We believe great style doesn't need to be complicated. It's about finding pieces that feel right, express who you are, and fit naturally into your everyday life.</p>
+        <p>From timeless essentials to little statement pieces, Stylora is here to help you make every outfit your own.</p>
+        <a href="#collection" class="text-link">Find your favourites <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="contact-section section-padding" id="contact">
+      <div class="contact-heading">
+        <span class="eyebrow">WE'RE HERE FOR YOU</span>
+        <h2>Let's talk<span class="heading-dot">.</span></h2>
+        <p>Have a question about an order or a product? Save a message on this device.</p>
+      </div>
+      <form id="supportForm" class="support-form">
+        <div class="form-row">
+          <label>
+            Your name
+            <input type="text" name="name" placeholder="Enter your name" required maxlength="100">
+          </label>
+          <label>
+            Email address
+            <input type="email" name="email" placeholder="you@example.com" required maxlength="150">
+          </label>
+        </div>
+        <label>
+          What can we help with?
+          <select name="subject" required>
+            <option value="" disabled selected>Choose a topic</option>
+            <option value="Product question">Product question</option>
+            <option value="Order or delivery">Order or delivery</option>
+            <option value="Returns and exchanges">Returns and exchanges</option>
+            <option value="Something else">Something else</option>
+          </select>
+        </label>
+        <label>
+          Your message
+          <textarea name="message" placeholder="How can we help you?" rows="4" required maxlength="2000"></textarea>
+        </label>
+        <div class="form-submit-row">
+          <button type="submit" class="primary-button" id="supportSubmitButton">Save message <span>↗</span></button>
+          <span id="supportFeedback" role="status"></span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div>
+        <a class="logo footer-logo" href="#home">stylora<span>.</span></a>
+        <p>Everyday pieces. Your own kind of style.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#story">Our story</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="currentYear"></span> Stylora. All rights reserved.</span>
+      <span>Made for your everyday.</span>
+    </div>
+  </footer>
+
+  <div class="drawer-backdrop" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart" aria-hidden="true">
+    <div class="drawer-header">
+      <div>
+        <span class="eyebrow">YOUR PICKS</span>
+        <h2>Shopping Cart <span id="drawerCount">(0)</span></h2>
+      </div>
+      <button class="close-button" id="cartClose" aria-label="Close shopping cart">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-subtotal"><span>Subtotal</span><strong id="cartTotal">Rs. 0.00</strong></div>
+      <p class="small-note">Delivery charges, if applicable, are confirmed separately.</p>
+      <button class="primary-button full-width" id="checkoutOpen">Continue to checkout <span>↗</span></button>
+      <button class="continue-shopping" id="continueShopping">Continue shopping</button>
+    </div>
+  </aside>
+
+  <div class="modal-backdrop" id="checkoutOverlay">
+    <section class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow">ALMOST YOURS</span>
+          <h2 id="checkoutTitle">Checkout</h2>
+        </div>
+        <button class="close-button" id="checkoutClose" aria-label="Close checkout">×</button>
+      </div>
+      <form id="checkoutForm">
+        <div class="checkout-steps" aria-label="Checkout progress">
+          <span class="checkout-step is-complete"><i>1</i> Delivery</span>
+          <span class="checkout-step-divider"></span>
+          <span class="checkout-step is-active" id="paymentStep"><i>2</i> Payment</span>
+          <span class="checkout-step-divider"></span>
+          <span class="checkout-step" id="confirmationStep"><i>3</i> Confirmation</span>
+        </div>
+        <label>Full name
+          <input type="text" name="customerName" required maxlength="100" autocomplete="name" placeholder="Your full name">
+        </label>
+        <label>Phone number
+          <input type="tel" name="phone" required maxlength="30" autocomplete="tel" placeholder="Your contact number">
+        </label>
+        <label>Delivery address
+          <textarea name="address" required maxlength="500" autocomplete="street-address" rows="3" placeholder="House number, street, city"></textarea>
+        </label>
+        <label>City
+          <input type="text" name="city" required maxlength="100" autocomplete="address-level2" placeholder="Your city">
+        </label>
+        <fieldset class="payment-methods">
+          <legend>Payment method</legend>
+          <label class="payment-method-option">
+            <input type="radio" name="paymentMethod" value="card" checked>
+            <span class="payment-method-copy">
+              <strong>Credit or debit card</strong>
+              <small>Visa · Mastercard · American Express</small>
+              <small class="demo-tag">Secure checkout preview · no charge</small>
+            </span>
+          </label>
+          <label class="payment-method-option">
+            <input type="radio" name="paymentMethod" value="cod">
+            <span><strong>Cash on delivery</strong><small>Save a local order preview</small></span>
+          </label>
+        </fieldset>
+        <div class="checkout-summary"><span>Order total</span><strong id="checkoutTotal">Rs. 0.00</strong></div>
+        <div class="payment-notice">
+          <span class="payment-notice-icon" aria-hidden="true">◇</span>
+          <div>
+            <strong id="paymentNoticeTitle">Card checkout — local demo only</strong>
+            <span id="paymentNoticeText">No card details are collected and no payment is taken.</span>
+          </div>
+        </div>
+        <button type="submit" class="primary-button full-width" id="placeOrderButton">Save demo card order</button>
+        <p id="checkoutMessage" class="status-message" role="status"></p>
+      </form>
+      <section class="checkout-processing" id="checkoutProcessing" aria-live="polite" hidden>
+        <span class="processing-spinner" aria-hidden="true"></span>
+        <h3>Preparing your checkout</h3>
+        <p id="processingMessage">Please wait while we prepare your order preview.</p>
+        <p class="processing-safety">This is a local demo. No payment details are requested or sent.</p>
+      </section>
+      <section class="checkout-receipt" id="checkoutReceipt" aria-live="polite" hidden>
+        <span class="receipt-check" aria-hidden="true">✓</span>
+        <span class="eyebrow" id="receiptEyebrow">ORDER PREVIEW SAVED</span>
+        <h3 id="receiptTitle">Your order is ready.</h3>
+        <p id="receiptDescription"></p>
+        <div class="receipt-details">
+          <div><span>Order reference</span><strong id="receiptOrderId"></strong></div>
+          <div><span>Payment</span><strong id="receiptPayment"></strong></div>
+          <div><span>Total</span><strong id="receiptTotal"></strong></div>
+        </div>
+        <p class="receipt-demo-note" id="receiptDemoNote"></p>
+        <button class="primary-button full-width" id="receiptDone" type="button">Continue shopping</button>
+      </section>
+    </section>
+  </div>
+
+  <div class="modal-backdrop account-overlay" id="accountOverlay">
+    <section class="checkout-modal account-modal" role="dialog" aria-modal="true" aria-labelledby="accountTitle">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow">YOUR STYLORA</span>
+          <h2 id="accountTitle">Welcome back</h2>
+        </div>
+        <button class="close-button" id="accountClose" type="button" aria-label="Close account">×</button>
+      </div>
+      <div class="account-content">
+        <div id="accountForms">
+          <p class="account-intro">Sign in on this browser to keep your Shopping Cart close.</p>
+          <form id="accountForm" class="account-form">
+            <label id="accountNameField" hidden>Full name
+              <input type="text" name="name" maxlength="100" autocomplete="name" placeholder="Your full name">
+            </label>
+            <label id="accountUsernameField" hidden>Username
+              <input type="text" name="username" minlength="3" maxlength="30" pattern="[A-Za-z0-9._\-]{3,30}" autocomplete="username" placeholder="Choose a username">
+            </label>
+            <label id="accountIdentifierField">Username or email
+              <input type="text" name="identifier" required maxlength="150" autocomplete="username" placeholder="Your username or email">
+            </label>
+            <label id="accountEmailField" hidden>Email address
+              <input type="email" name="email" required maxlength="150" autocomplete="email" placeholder="you@example.com">
+            </label>
+            <label>Password
+              <input type="password" name="password" required minlength="12" maxlength="72" autocomplete="current-password" placeholder="At least 12 characters">
+            </label>
+            <p id="accountFeedback" class="status-message" role="status"></p>
+            <button type="submit" class="primary-button full-width" id="accountSubmit">Sign in <span>↗</span></button>
+          </form>
+          <button class="account-mode-toggle" id="accountModeToggle" type="button">Create an account</button>
+          <p class="small-note account-setup-note">Accounts are saved only in this browser. They are not synced or secured by an online service.</p>
+        </div>
+        <div id="accountSignedIn" class="account-signed-in" hidden>
+          <span class="account-avatar" id="accountAvatar"></span>
+          <h3 id="accountWelcome">Welcome</h3>
+          <p id="accountEmail"></p>
+          <p class="small-note">This local account is saved only in this browser.</p>
+          <button class="secondary-button full-width" id="accountLogout" type="button">Sign out</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <aside class="support-agent" id="supportAgent" aria-label="Stylora customer support">
+    <section class="support-agent-panel" id="supportAgentPanel" aria-labelledby="supportAgentTitle" hidden>
+      <header class="support-agent-header">
+        <div>
+          <span class="eyebrow">STYLORA HELP</span>
+          <h2 id="supportAgentTitle">How can I help?</h2>
+        </div>
+        <button class="support-agent-close" id="supportAgentClose" type="button" aria-label="Close support chat">×</button>
+      </header>
+      <div class="support-agent-messages" id="supportAgentMessages" role="log" aria-live="polite" aria-relevant="additions">
+        <p class="support-agent-bubble support-agent-reply">Hi! I’m Stylora’s local support assistant. Ask about products, payment options, saved orders, or returns. I don’t use a database. For now, this assistant can only share information built into this browser.</p>
+      </div>
+      <div class="support-agent-prompts" aria-label="Suggested questions">
+        <button type="button" data-support-prompt="What payment methods can I use?">Payment options</button>
+        <button type="button" data-support-prompt="Where is my order?">Order status</button>
+        <button type="button" data-support-prompt="How do returns work?">Returns</button>
+      </div>
+      <form class="support-agent-form" id="supportAgentForm">
+        <label class="visually-hidden" for="supportAgentInput">Ask Stylora support</label>
+        <input id="supportAgentInput" name="question" type="text" maxlength="500" placeholder="Type your question..." autocomplete="off" required>
+        <button type="submit" aria-label="Send question">↗</button>
+      </form>
+      <p class="support-agent-note">Local assistant · messages stay in this tab</p>
+    </section>
+    <button class="support-agent-toggle" id="supportAgentToggle" type="button" aria-expanded="false" aria-controls="supportAgentPanel">
+      <span aria-hidden="true">✳</span> Need help?
+    </button>
+  </aside>
+</body>
+</html>
